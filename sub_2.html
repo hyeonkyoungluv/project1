@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<script src="js/jquery-3.1.1.min.js"></script>
+
+    <script>
+        $(function() {
+            $('.accordion').each(function() {
+                var dl = $(this);
+                var allDt = dl.find('dt');
+                var allDd = dl.find('dd');
+                allDd.hide();
+                allDt.css('cursor', 'pointer');
+                allDt.click(function() {
+                    var dt = $(this);
+                    var dd = dt.next();
+                    allDd.hide();
+                    dd.show();
+                    allDt.css('cursor', 'pointer');
+                    dt.css('cursor', 'default');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <header id="header">
+
+
+
+            <div class="top_header">
+                <div class="inner">
+                    <div class="m_menu"><a href="#"><img src="img/ico_menu.png"></a></div>
+                    <nav class="left_gnbWrap">
+                        <a href="#" class="close">close</a>
+                        <ul class="left_gnb">
+                            <li>
+                                <a href="#">menu1</a>
+                                <ul>
+                                    <li><a href="#">sub1</a></li>
+                                    <li><a href="#">sub2</a></li>
+                                    <li><a href="#">sub3</a></li>
+                                    <li><a href="#">sub4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">menu2</a>
+                                <ul>
+                                    <li><a href="#">sub1</a></li>
+                                    <li><a href="#">sub2</a></li>
+                                    <li><a href="#">sub3</a></li>
+                                    <li><a href="#">sub4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">menu3</a>
+                                <ul>
+                                    <li><a href="#">sub1</a></li>
+                                    <li><a href="#">sub2</a></li>
+                                    <li><a href="#">sub3</a></li>
+                                    <li><a href="#">sub4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">menu4</a>
+                                <ul>
+                                    <li><a href="#">sub1</a></li>
+                                    <li><a href="#">sub2</a></li>
+                                    <li><a href="#">sub3</a></li>
+                                    <li><a href="#">sub4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="menu">
+                        <li><select>
+                                <option>CUSTOMER</option>
+                                <option>General</option>
+                                <option>VIP</option>
+                            </select>
+
+                        </li>
+                        <li>COMPANY</li>
+                        <li>SERVICE</li>
+                    </ul>
+                    <div><a href="#" class="modal">코나이벤트 자세히보기</a></div>
+                    <div id="pop_up">
+                        <div class="img">
+                            <img src="img/beerpopup.jpg">
+                            <div class="btn">
+                                <button>닫기</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="login">
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                        <li>회사소개</li>
+                        <li>ENGLISH</li>
+                    </ul>
+                </div>
+            </div>
+            <div></div>
+            <div class="bottom_header">
+                <div class="inner">
+                    <nav id="nav2" class="navi">
+                        <div class="inner">
+                            <ul class="depth1">
+                                <li><a href="#">BEST SELLER</a>
+
+                                    <ul class="submenu">
+                                        <li><a href="#">Awards</a></li>
+                                        <li><a href="#">Origin story</a></li>
+
+                                    </ul>
+
+                                </li>
+                                <li><a href="#">상품</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Our Beer</a></li>
+                                        <li><a href="#">Lager</a></li>
+                                        <li><a href="#">Ale</a></li>
+                                        <li><a href="#">IPA</a></li>
+                                        <li><a href="#">Stout</a></li>
+                                        <li><a href="#">Factory</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">이벤트/혜택</a>
+                                    <ul class="submenu">
+
+
+                                        <li><a href="sub.html">Halloween Ticket</a></li>
+                                        <li><a href="#">제휴 혜택</a></li>
+                                        <li><a href="#">진행중 이벤트</a></li>
+                                        <li><a href="#">이벤트 당첨자</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">고객지원</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Q&A</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="logo"><a href="index.html"><img src="img/LOGO.png"></a></div>
+                </div>
+            </div>
+
+        </header>
+        <div id="sub_2" class="sub_main">
+
+            <div class="ourbeer"><img src="img/ourbeer.png"></div>
+            <div>
+                <h2>Widely Available</h2>
+
+
+
+                <p>Kona is available nationally and in some international markets, including Canada, Japan, Brazil and Australia. From beer to seltzer, our Liquid Aloha will always be island-inspired, refreshing and easy-drinking.
+
+                </p>
+
+            </div>
+
+
+            <div class="inner">
+                <div class="beer_intro"><img src="img/KO-Big-Wave-Bottlepint-600x830-for-web.png"></div>
+                <div class="beer_detail">
+                    
+                    <div>
+                    <div class="beer_title"><img src="img/bigwavetxt.png"></div>
+                    
+                        <p>
+
+                            Available year-round
+                            Big Wave is a lighter-bodied golden ale with a tropical hop aroma and flavor—smooth, easy drinking, and refreshing. The use of caramel malt contributes to the golden hue of this beer, and our special blend of hops provides a bright, quenching finish that makes it a struggle to not grab another one.
+                        </p>
+
+                   
+
+                </div>
+                <dl class="accordion">
+                    <dt>Origin story</dt>
+                    <dd><span>Catch a wave</span>
+                        The waves in Hawaii are legendary. In the winter months, the island’s north and west coasts see big waves that often climb to 40 feet, with huge curls of white water breaking off shore. This is just one reason why surfers, body boarders, paddlers, and those of us just willing to watch from the beach make this pilgrimage.</dd>
+                    <dt>Brewers notes</dt>
+                    <dd>BITTERNESS
+                        21 IBU
+
+                        ALCOHOL BY VOLUME
+                        4.4%
+
+                        ORIGINAL GRAVITY
+                        10.3° P
+
+                        MALTS
+                        Pale 2 Row Premium, Caramel 20
+
+                        HOPS
+                        Galaxy, Citra
+                        FOOD PAIRINGS
+                        Big Wave’s lighter body and bright hop aroma and taste make it a natural choice to enjoy with seafood, poultry, salads, and light pasta dishes.
+
+                        NUTRITIONAL INFO
+                        ABV% 4.40 | Calories 132 | Carbs (grams) 10.0 | Protein (grams) 1.46 | Fat (grams) 0 | Sodium (mg) 9.19</dd>
+                    <dt>Awards</dt>
+                    <dd>2019 SILVER MEDAL Session Beer, Best of Craft Beer Awards 2016 GOLD MEDAL Light Ale Category, North American Beer Awards 2016 SILVER MEDAL Golden/Blonde Ale Category, Can Can Awards 2016 SILVER MEDAL Blonde Ale Category, Best of Craft Beer Awards 2016 SILVER MEDAL Blonde/Golden Ale Category, International Craft Award Competition 2015 GOLD MEDAL Light Ale/Golden Category, Great International Beer and Cider Competition 2014 GOLD MEDAL Light Ale Category, North American Brewers Association 2014 BRONZE MEDAL Session Beer Category, US Open Beer Championship 2013 GOLD MEDAL Session Beer Category, US Open Beer Championship 2011 BRONZE MEDAL Blonde or Golden Ale Category, North American Beer Awards</dd>
+
+                </dl>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer id="footer">
+            <div class="inner">
+                <div class="f_top">
+                    <ul>
+                        <li>Contact us</li>
+                        <li>Accessibility</li>
+                        <li>Privacy Policy</li>
+                        <li>Careers</li>
+                        <li>Service</li>
+                        <li>About Kona</li>
+                        <li>Community</li>
+                        <li>Map</li>
+                    </ul>
+                </div>
+                <div class="f_bottom">
+                    <div class="f_logo"><img src="img/f_logo.png"></div>
+                    <div>
+                        <ul>
+                            <li>address 74-5612 Pawai PI,Kailua-Kona, HI 96740, US</li>
+                            <li>Beer made with passion, quality, and a whole lot of Hawaii.</li>
+                            <li>it’s Liquid Aloha from Kona Brewing Co.</li>
+                            <li>Copyright2020ⓒ Kona Brewing Co.</li>
+                        </ul>
+                        <p>Contact number +1 808-334-2739</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body></html>

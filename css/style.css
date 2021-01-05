@@ -1,0 +1,1882 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+html {
+    font-size: 10px
+}
+
+.a {
+    text-decoration: none
+}
+
+body {
+    overflow-x: hidden font-size: 1.3rem;
+    font-family: "NotoSansCJKkr-Regular"
+
+}
+
+ul {
+    list-style: none
+}
+
+.inner {
+    width: 1280px;
+    margin: 0 auto
+}
+
+video {
+    width: 100%;
+    position: absolute;
+    top: -20%
+}
+
+/*header*/
+.m_menu {
+    float: right;
+    line-height: 40px;
+    padding-left: 1.8%
+}
+
+.m_menu img {
+    vertical-align: middle
+}
+
+.menu {
+    float: left;
+    font-size: 1.2rem
+}
+
+.login {
+    float: right
+}
+
+.top_header > .inner:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.menu > li {
+    width: 90px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    float: left
+}
+
+.menu > li:nth-child(1) {
+    background-color: #512c1c
+}
+
+.menu > li:nth-child(1) > select {
+    border: none;
+    background-color: #512c1c;
+    width: 90px;
+
+    color: #fff;
+    font-size: 1.2rem
+}
+
+.menu > li:nth-child(2) {
+    background-color: #98563c
+}
+
+.menu > li:nth-child(3) {
+    background-color: #cc7854
+}
+
+.menu:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+/* 모바일 메뉴 버튼 */
+
+.m_menu > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+a.close {
+    background-color: #00668e;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #000;
+    line-height: 50px;
+    text-align: center;
+}
+
+.left_gnbWrap {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    right: -200px;
+    top: 0;
+    background-color: #5bb6d0;
+    padding-top: 50px;
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.left_gnbWrap.on {
+    right: 0;
+}
+
+.left_gnb > li {
+    width: 100%;
+    font-size: 1.2rem
+}
+
+.left_gnb > li > a {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    width: 100%;
+    height: 50px;
+    background-color: #addae7;
+    color: black;
+}
+
+.left_gnb > li > a.on {
+    background-color: #f2ce5a;
+}
+
+.left_gnb > li > ul {
+    display: none;
+}
+
+.left_gnb > li > ul > li > a {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    width: 100%;
+    height: 50px;
+    background-color: #f3e5b8;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+/* 네비1,2,3 공통 */
+
+
+.navi .inner {
+    position: relative;
+    width: 100%
+}
+
+.navi .depth1 {
+    position: absolute;
+    width: 35%;
+    left: 0;
+    top: 35px
+}
+
+.navi .depth1 > li {
+    float: left;
+    width: 25%;
+    background-color: #fff;
+}
+
+.navi .depth1 > li > a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    line-height: 1em;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.navi .depth1 > li > ul {
+    font-size: 1.2rem;
+    line-height: 1.4em;
+    box-sizing: border-box;
+}
+
+.navi .depth1 > li > ul:before {
+    content: '';
+    display: block;
+    height: 30px;
+}
+
+.navi .depth1 .depth2 ul {
+    padding-top: 1em;
+    font-size: 0.8rem
+}
+
+
+/* 네비2 */
+#nav2 .depth1 {
+    z-index: 98;
+    height: calc(1.1rem + 19px);
+    overflow: hidden;
+    transition: height 1s;
+    border-bottom: 1px solid transparent;
+}
+
+#nav2 .depth1:hover {
+    height: calc(1.1rem + 20px + 400px);
+}
+
+#nav2 .depth1 ul {
+    border-right: 1px solid #ccc;
+    height: 200px;
+    opacity: 0;
+    transition: opacity 1s;
+    padding: 0 10px;
+    color: #fff;
+    text-decoration: none
+}
+
+#nav2 .depth1 li:first-child ul {
+    border-left: 1px solid #ccc;
+}
+
+#nav2 .depth1:hover ul {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+.login {
+    font-size: 1.4rem;
+    color: #c0bebe;
+    line-height: 40px
+}
+
+.login > li {
+    float: left;
+    padding-left: 32px
+}
+
+.login > li:first-child {
+    padding-left: 0
+}
+
+.login > li:nth-child(3),
+.login > li:nth-child(4) {
+    color: #747474
+}
+
+.login > li:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+#header > div:nth-child(2) {
+    border: 1px solid #e0e0e0
+}
+
+.bottom_header > .inner {
+    height: 96px;
+    line-height: 96px
+}
+
+.logo {
+    width: 104px;
+    height: 82px;
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    right: 15%;
+    margin: 0 auto
+}
+
+.logo img {
+    width: 100%
+}
+
+.bottom_header > .inner > ul {
+    font-size: 1.5rem;
+    color: #999;
+    width: 30%;
+    position: relative;
+    z-index: 999
+}
+
+.bottom_header > .inner > ul:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.bottom_header > .inner > ul > li {
+    float: left;
+    width: 25%;
+    text-align: center
+}
+
+
+/*popup*/
+#pop_up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: none;
+}
+
+/*뒷 배경*/
+#pop_up .img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    text-align: center;
+}
+
+#pop_up .img img {
+    display: block;
+    padding: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#pop_up .btn {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#pop_up .btn button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #009688;
+    color: white;
+}
+
+.modal {
+    display: block;
+    padding: 12px 0 0 23%;
+        text-decoration: none;
+    color: brown;font-size: 1.2rem
+}
+
+.mainimg {
+    width: 100%;
+    height: 640px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+/*main*/
+#slide .container {
+    position: relative;
+    width: 2000px;
+    height: 640px;
+    overflow: hidden;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+}
+
+#slide .container > div {
+    width: 100%;
+    height: 640px;
+    float: left;
+}
+
+#slide img {
+    width: 100%;
+}
+
+#slide .slide_photo1 {
+    background-image: url(../img/layout_beer-Recovered_02.jpg);
+    background-size: 100%;
+
+}
+
+#slide .slide_photo2 {}
+
+#slide .slide_photo3 {
+    background-image: url(../img/main1.jpg);
+    background-size: 100%;
+
+}
+
+
+.flickerplate {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-top: calc(640/1920*100%);
+    background-color: #e6e6e6;
+    overflow: hidden
+}
+
+.flickerplate ul.flicks {
+    width: 10000%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    list-style: none
+}
+
+.flickerplate ul.flicks > li {
+    float: left;
+    width: 1%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: table
+}
+
+
+.flickerplate ul.flicks > li:nth-child(1) {
+    background-image: url(../img/layout_beer-Recovered_02.jpg);
+    background-size: cover
+}
+
+
+.flickerplate ul.flicks > li:nth-child(2) {}
+
+
+.flickerplate ul.flicks > li:nth-child(3) {
+    background-image: url(../img/main1.jpg);
+    background-size: cover
+}
+
+
+
+
+
+
+
+
+
+
+.flickerplate ul.flicks > li .flick-inner {
+    height: 100%;
+    padding: 10px;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.flickerplate ul.flicks > li .flick-inner .flick-content {
+    max-width: 68.75em;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.flickerplate ul.flicks > li:nth-child(2) .flick-inner .flick-content {
+    max-width: 100%;
+    position: relative;
+    padding-top: calc(640/1920*100%);
+}
+
+video {
+    width: 100%;
+    position: absolute;
+    top: -20%
+}
+
+.flickerplate ul.flicks > li .flick-title {
+    padding: 0px 0px;
+    font-size: 2.778em;
+    line-height: 1.995em;
+    text-align: center
+}
+
+@media only screen and (max-width: 43.813em) {
+    .flickerplate ul.flicks > li .flick-title {
+        font-size: 1.667em
+    }
+}
+
+.flickerplate ul.flicks > li .flick-sub-text {
+    padding: 5px;
+    font-weight: 300;
+    line-height: 2.5em;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center
+}
+
+.flickerplate ul.flicks > li .flick-title span.flick-block-text,
+.flickerplate ul.flicks > li .flick-sub-text span.flick-block-text {
+    padding: 12px 18px;
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.flickerplate .arrow-navigation {
+    position: absolute;
+    height: 80%;
+    width: 10%;
+    top: 10%;
+    z-index: 100;
+    overflow: hidden
+}
+
+.flickerplate .arrow-navigation .arrow {
+    display: block;
+    height: 100%;
+    width: 90%;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out
+}
+
+.flickerplate .arrow-navigation:hover,
+.flickerplate .arrow-navigation .arrow:hover {
+    cursor: pointer
+}
+
+.flickerplate .arrow-navigation.left {
+    left: 0%
+}
+
+.flickerplate .arrow-navigation.left .arrow {
+    opacity: 0;
+    margin: 0px 0px 0px 50%;
+    background-image: url("../img/flickerplate/arrow-left-light.png");
+    background-repeat: no-repeat;
+    background-position: left
+}
+
+.flickerplate .arrow-navigation.right {
+    right: 0%
+}
+
+.flickerplate .arrow-navigation.right .arrow {
+    opacity: 0;
+    margin: 0px 0px 0px -50%;
+    background-image: url("../img/flickerplate/arrow-right-light.png");
+    background-repeat: no-repeat;
+    background-position: right
+}
+
+.flickerplate .arrow-navigation.left.hover .arrow {
+    opacity: 1;
+    margin: 0px 0px 0px 20%
+}
+
+.flickerplate .arrow-navigation.right.hover .arrow {
+    opacity: 1;
+    margin: 0px 0px 0px -20%
+}
+
+.flickerplate .dot-navigation {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 100
+}
+
+.flickerplate .dot-navigation ul {
+    text-align: center;
+    list-style: none;
+    padding: 0px 15px
+}
+
+.flickerplate .dot-navigation ul li {
+    display: inline-block;
+    float: none
+}
+
+.flickerplate .dot-navigation .dot {
+    width: 14px;
+    height: 14px;
+    margin: 0px 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out
+}
+
+.flickerplate .dot-navigation .dot:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6)
+}
+
+.flickerplate .dot-navigation .dot.active {
+    background-color: #fff
+}
+
+.flickerplate .dot-navigation.left,
+.flickerplate .dot-navigation.left ul {
+    text-align: left
+}
+
+.flickerplate .dot-navigation.right,
+.flickerplate .dot-navigation.right ul {
+    text-align: right
+}
+
+.flickerplate.flicker-theme-dark .arrow-navigation.left .arrow {
+    background-image: url("../img/flickerplate/arrow-left-dark.png")
+}
+
+.flickerplate.flicker-theme-dark .arrow-navigation.right .arrow {
+    background-image: url("../img/flickerplate/arrow-right-dark.png")
+}
+
+.flickerplate.flicker-theme-dark .dot-navigation .dot {
+    background-color: rgba(0, 0, 0, 0.12)
+}
+
+.flickerplate.flicker-theme-dark .dot-navigation .dot:hover {
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.flickerplate.flicker-theme-dark .dot-navigation .dot.active {
+    background-color: #000
+}
+
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-sub-text {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-title span.flick-block-text,
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-sub-text span.flick-block-text {
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-sub-text {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-title span.flick-block-text,
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-sub-text span.flick-block-text {
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.flickerplate.animate-transform-slide ul.flicks {
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0%, 0px, 0px);
+    -webkit-transform: translate3d(0%, 0px, 0px);
+    -webkit-transition: -webkit-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    transition: transform 0.6s
+}
+
+.flickerplate.animate-transition-slide ul.flicks {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    -webkit-transition: left 0.4s ease-out;
+    -moz-transition: left 0.4s ease-out;
+    -o-transition: left 0.4s ease-out;
+    -ms-transition: left 0.4s ease-out;
+    transition: left 0.4s ease-out
+}
+
+.flickerplate.animate-jquery-slide ul.flicks {
+    position: relative;
+    left: 0%
+}
+
+.flickerplate.animate-scroller-slide {
+    padding-bottom: 0px;
+    overflow: auto
+}
+
+.flickerplate.animate-scroller-slide ul.flicks {
+    position: auto
+}
+
+
+
+
+/*best*/
+
+
+
+
+
+
+
+
+
+
+.best > .inner {
+    padding-top: 102px
+}
+
+h2 {
+    color: #383838;
+    font-size: 6rem;
+    text-align: center
+}
+
+.best > .inner > p {
+    padding: 22px 0 50px 0
+}
+
+.maintxt {
+    font-size: 2.4rem;
+    text-align: center
+}
+
+.beer_set > div {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    height: 411px;
+    position: relative;
+    overflow: hidden
+}
+
+.beer_set:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.delivery {
+    background-image: url(../img/deliver_bk.jpg);
+    width: 100%;
+    height: 135px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 150px;
+    background-position: center center
+}
+
+.delivery:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+
+
+.d_left {
+    float: left;
+    color: #742300;
+    padding-left: 30px;
+    padding-top: 30px;
+
+}
+
+.d_right:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    overflow: hidden
+}
+
+.d_right {
+    float: right;
+    padding-right: 30px;
+    padding-top: 20px;
+    transform: scale(1);
+    transition: all 0.5s;
+    overflow: hidden
+}
+
+
+.d_left > h4 {
+    font-size: 1.5rem
+}
+
+.d_left > p {
+    font-size: 1.3rem
+}
+
+.c_txt {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold
+}
+
+.best > .inner > h2 {
+    height: 80px;
+    width: 100%;
+    position: relative
+}
+
+.best > .inner > h2 > span:nth-child(1) {
+    position: absolute;
+    height: 1px;
+    background-color: #742300;
+    width: 43%;
+    top: 45px;
+    left: 0
+}
+
+.best > .inner > h2 > span:nth-child(3) {
+    position: absolute;
+    height: 1px;
+    background-color: #742300;
+    width: 43%;
+    top: 45px;
+    right: 0
+}
+
+.best > .inner > h2 > span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+}
+
+.beer_set > div > div {
+    display: none
+}
+
+
+.slick-initialized .slick-slide .h_slide {
+    display: block;
+    width: 418px;
+    height: 520px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+    padding-top: 28%;
+    transform: translate(0, 550px);
+    position: absolute;
+    top: 0px;
+    transition: all 0.6s
+}
+
+.slick-initialized .slick-slide:hover .h_slide {
+    transform: translate(0, 0px);
+    transition: all 0.6s
+}
+
+
+
+.slick-slide .imgimg {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0
+}
+
+
+
+
+
+
+/*halloween*/
+.h_left {
+    position: absolute;
+    width: 50%;
+    top: 15%;
+    left: 8%
+}
+
+.h_right {
+    position: absolute;
+    width: 50%;
+    top: 32%;
+    right: -15%;
+    font-size: 4.5rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 75px
+}
+
+.Halloween {
+    background-image: url(../img/banner_bk.jpg);
+    height: 340px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 160px
+}
+
+.Halloween > .inner {
+    width: 1280px;
+    height: 340px;
+    position: relative;
+}
+
+/*s_beer*/
+
+
+.S_beer {
+    background-color: #ececec;
+    width: 100%;
+    height: 850px
+}
+
+.S_beer > .inner {
+    padding: 65px 0 160px
+}
+
+.insta > li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+
+
+}
+
+.insta > li:nth-child(1) {}
+
+.insta > li > img {
+    box-shadow: 5px 15px 30px #333
+}
+
+
+.insta > li:nth-child(1):hover img {
+    transform: scale(1.15);
+    transition: all 0.4s
+}
+
+.insta > li:nth-child(2):hover img {
+    transform: scale(1.15);
+    transition: all 0.4s
+}
+
+.insta > li:nth-child(3):hover img {
+    transform: scale(1.15);
+    transition: all 0.4s
+}
+
+.insta > li:nth-child(1) img {
+    transition: all 0.4s
+}
+
+.insta > li:nth-child(2) img {
+    transition: all 0.4s
+}
+
+.insta > li:nth-child(3) img {
+    transition: all 0.4s
+}
+
+
+.insta:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+
+
+/*enjoy*/
+.enjoy > .inner {
+    padding: 80px 0 130px
+}
+
+.enjoy > .inner > p {
+    padding: 22px 0 55px
+}
+
+.i_set > li {
+    float: left;
+    width: 25%;
+    text-align: center
+}
+
+.i_set:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.i_set > li > i {
+    width: 60px;
+    height: 60px;
+    display: inline-block
+}
+
+.i_set > li > p {
+    font-size: 1.5rem;
+    padding-top: 5%
+}
+
+.i_set > li:nth-child(2) > i > img {
+    width: 90%;
+    transition: all 0.6s
+}
+
+.i_set > li:nth-child(2) > i:hover > img {
+    transform: rotate(110deg);
+    transition: all 0.6s
+}
+
+
+.i_set > li:nth-child(3) > i > img {
+    width: 70%;
+    transition: all 0.4s
+}
+
+.i_set > li:nth-child(3) > i:hover > img {
+    ;
+    transition: all 0.4s;
+    transform: rotateX(180deg)
+}
+
+.i_set > li:nth-child(4) > i > img {
+    width: 112%;
+    transition: all 0.4s;
+    transform: scale(1)
+}
+
+.i_set > li:nth-child(4) > i:hover > img {
+    transform: scale(1.3);
+    transition: all 0.4s
+}
+
+.i_set > li:nth-child(1) > i > img {
+    width: 110%;
+    transition: all 0.4s
+}
+
+.i_set > li:nth-child(1) > i:hover img {
+    transform: rotateY(180deg);
+    transition: all 0.4s
+}
+
+
+/*beach_finder*/
+.beach {
+    background-image: url(../img/layout_beer-Recovered_49.jpg);
+    height: 278px;
+    width: 100%
+}
+
+.find > .inner {
+    height: 78px;
+    width: 1280px
+}
+
+.find > .inner > div {
+    float: left
+}
+
+.find > .inner:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.find_set {
+    margin: 15px 45px
+}
+
+.find > .inner > .find_set > div:nth-child(1) {
+    width: 993px;
+    height: 52px;
+    background-color: #bfdfea;
+    border-radius: 40px;
+    float: left
+}
+
+.find > .inner > .find_set > .search {
+    float: right;
+}
+
+
+
+.find > .inner > div:first-child {
+    font-size: 2.4rem;
+    line-height: 78px;
+    font-family: "Sriracha"
+}
+
+
+/*footer*/
+
+#footer {
+    width: 100%;
+
+    background-color: #0081ab;
+}
+
+.f_top > ul > li {
+    float: left;
+    width: 10.75%;
+    padding-right: 2%
+}
+
+.f_top > ul {
+    color: #85b6cc;
+    font-size: 1.7rem;
+    width: 90%;
+    padding: 30px 0
+}
+
+.f_top > ul:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.f_logo {
+    float: left;
+    margin-left: 4.8%
+}
+
+.f_top > ul > li:last-child {
+    padding-right: 0
+}
+
+.f_bottom > div:last-child > ul {
+    float: left;
+    font-size: 1.5rem;
+    color: #85b6cc;
+    line-height: 30px;
+    padding: 45px 140px 0 100px
+}
+
+.f_bottom > div:last-child > p {
+    float: left;
+    font-size: 1.5rem;
+    color: #85b6cc;
+    padding-top: 62px
+}
+
+.f_bottom > div:last-child:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+
+
+
+
+/*반응형*/
+.bottom_header > .inner > ul > li a {
+    text-decoration: none;
+    transition: all 0.4s;
+    color: #606868
+}
+
+.bottom_header > .inner > ul > li:hover a {
+    color: brown;
+    font-weight: bold
+}
+
+.submenu {
+    width: 25%;
+    position: absolute;
+    top: 14%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.5s
+}
+
+.submenu li {
+    padding: 7% 0;
+    line-height: normal
+}
+
+.submenu > ul > li:hover {
+    background-color: firebrick;
+    transition: all 0.4s
+}
+
+.bottom_header > .inner > ul > li:hover .submenu {
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.submenu > ul > li {
+    float: left;
+    padding: 6px;
+    transition: all 0.4s
+}
+
+#nav2 .depth1 ul li a {
+    text-decoration: none;
+    color: #fff
+}
+
+#nav2 .depth1 ul li:hover a {
+    color: #98563c
+}
+
+
+/*맥주반응*/
+.beerimg > div {
+    width: 418px;
+    height: 520px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+    padding-top: 12%;
+    transform: translate(0, 420px);
+    position: absolute;
+    top: 0px;
+    transition: all 0.6s
+}
+
+.beerimg:hover div {
+    transform: translate(0, 0);
+    transition: all 0.6s
+}
+
+
+.beerimg1 > div {
+    width: 418px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+    padding-top: 12%;
+    transform: translate(0, -520px);
+    position: absolute;
+    top: 0;
+    transition: all 0.6s
+}
+
+.beerimg2 > div {
+    width: 418px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+    padding-top: 12%;
+    transform: translate(450px, 0);
+    position: absolute;
+    top: 0;
+    transition: all 0.6s
+}
+
+.beerimg1:hover div {
+    transform: translate(0, 0);
+    transition: all 0.6s
+}
+
+.beerimg2:hover div {
+    transform: translate(0, 0);
+    transition: all 0.6s
+}
+
+.beer_set > div > div {
+    display: block
+}
+
+.beer_set > .beerimg > div > h2 {
+    color: #b2141d
+}
+
+.beer_set > .beerimg1 > div > h2 {
+    color: #00aad7
+}
+
+.beer_set > .beerimg2 > div > h2 {
+    color: #e79b13
+}
+
+
+
+/*sub*/
+.sub_main {
+    background-image: url(../img/sub_main.jpg);
+    width: 100%;
+    height: 455px;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.s_title {
+    text-align: center;
+    color: #343535;
+    padding: 1.5% 0
+}
+
+.box1 > .inner > ul:first-child > li:nth-child(1) {
+    float: left
+}
+
+.box1 > .inner > ul:first-child > li:nth-child(2) {
+    float: right
+}
+
+.box1 > .inner > ul:first-child:after {
+    display: block;
+    clear: both;
+    border: 1px solid #a8a7a7
+}
+
+.box1 > .inner > ul:nth-child(2):after {
+    border: 1px solid #a8a7a7;
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.box1 > .inner > ul:nth-child(2) > li:nth-child(1) {
+    float: left;
+    font-size: 1.8rem;
+    padding: 1.5% 0
+}
+
+.box1 > .inner > ul:nth-child(2) > li:nth-child(2) {
+    float: right
+}
+
+
+.box1 > .inner > ul:nth-child(3) > li {
+    float: left;
+    width: 30%;
+    padding: 1.2% 0;
+    text-align: center
+}
+
+.box1 > .inner > ul:nth-child(3) > li:first-child {
+    text-align: left
+}
+
+.box1 > .inner > ul:nth-child(3):after {
+    display: block;
+    content: "";
+    clear: both;
+    border: 1px solid #a8a7a7
+}
+
+.price > li {
+    float: left;
+    width: 30%;
+    text-align: center;
+    padding: 1.2% 0;
+    font-size: 2rem
+}
+
+.price > li > dl > dd:nth-child(1) {
+    font-size: 1.3rem;
+    text-decoration-line: line-through
+}
+
+.price > li:first-child {
+    text-align: left;
+    font-size: 1.5rem
+}
+
+.price:after {
+    display: block;
+    content: "";
+    clear: both;
+    border: 1px solid #a8a7a7
+}
+
+.sub_contents {
+    padding-top: 50px;
+    width: 100%;
+    height: 700px
+}
+
+
+.s_con > div {
+    float: left;
+    width: 50%;
+    text-align: center
+}
+
+.s_con:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.reserve {
+    background-color: #ac2826;
+    width: 280px;
+    height: 84px;
+    text-align: center;
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: 84px;
+    margin: 1.8% auto;
+}
+
+.s_con > div > p {
+    width: 70%;
+    margin: 4.5% auto
+}
+
+.sub_contents > p {
+    font-size: 1.8rem;
+    padding: 1.5% 0
+}
+
+
+
+/*sub2*/
+
+
+#sub_2{background-image: url(../img/sub2_bg.jpg);background-size: cover;width: 100%;height: 1800px}
+
+
+
+.ourbeer{width: 200px;height: 50px;text-align: center;margin: 0 auto;padding-top: 8%}
+.ourbeer>img{width: 100%}
+
+
+.beer_intro{float: left;
+    text-align: right;
+    width: 30%}
+.beer_detail{float: right;width: 65%}
+
+.beer_title{padding-top: 8%}
+
+#sub_2 .inner:after{display: block;content: "";clear: both}
+
+/*아코디언*/
+
+
+dl{
+	width:420px;
+	margin:0 auto 20px;
+}
+dt{
+	font-size:16px;
+	color:#fff;
+	background:#31374c;
+	padding:8px 12px;
+	border-radius:3px;
+	margin:0 0 2px;
+}
+dd{
+	font-size:14px;
+	color:#4d4d4d;
+	background:#fff;
+	padding:10px 20px;
+	margin:0 0 2px;
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .center > .in_img {
+        width: 100%
+    }
+
+    .inner {
+        width: 98%
+    }
+
+    .menu {
+        display: none
+    }
+
+    .slick-slide img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto
+    }
+
+    #header > div:nth-child(2) {
+        display: none
+    }
+
+    .bottom_header > .inner > ul > li a {
+        display: none
+    }
+
+    .logo {
+        width: 9%;
+        top: 5%
+    }
+
+    .flickerplate {
+        padding-top: calc(960/960*100%);
+        position: relative;
+        top: 0
+    }
+
+    .flickerplate ul.flicks > li:nth-child(1) {
+        background-image: url(../img/m_main.jpg);
+        background-size: cover
+    }
+
+
+    .flickerplate ul.flicks > li:nth-child(2) {
+        background-image: url(../img/main1_m.jpg);
+        background-size: cover
+    }
+
+
+    .flickerplate ul.flicks > li:nth-child(3) {
+        background-image: url(../img/main3_m.jpg);
+        background-size: cover
+    }
+
+    .bottom_header > .inner > ul {
+        font-size: 1.2rem
+    }
+
+
+
+    .beer_set > div:nth-child(2) {
+        display: none
+    }
+
+    .beer_set > div:nth-child(3) {
+        display: none
+    }
+
+    .beer_set > div:nth-child(1) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto
+    }
+
+    .slick-dots {
+        bottom: 30px
+    }
+
+
+    .slick-initialized .slick-slide .h_slide {
+        width: 100%;
+        margin: 0 auto;
+        height: 68%
+    }
+
+    .slick-initialized .slick-slide .h_slide h2 {
+        font-size: 4rem;
+        padding-bottom: 10%
+    }
+
+    .slick-initialized .slick-slide .h_slide p {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 0 16%
+    }
+
+
+
+
+
+
+
+    .best > .inner {
+        width: 85%
+    }
+
+    .best > .inner > h2 > span:nth-child(1),
+    .best > .inner > h2 > span:nth-child(3) {
+        width: 40%
+    }
+
+
+    .maintxt {
+        font-size: 1.7rem
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*반응형맥주 글씨*/
+    .best > .inner > p {
+        font-size: 1.8rem
+    }
+
+    .beer_set > .beerimg > div > h2 {
+        font-size: 4rem;
+        padding: 10% 2%
+    }
+
+    .beerimg > div {
+        width: 100%
+    }
+
+
+
+
+
+
+
+
+    .beer_set {
+        height: 0;
+        padding-top: calc(136.333/407*100%);
+        position: relative
+    }
+
+    .delivery {
+        display: none
+    }
+
+    .Halloween {
+        width: 100%;
+        height: 500px
+    }
+
+    .Halloween > .inner {
+        width: 98%;
+        height: auto;
+        padding-top: 5%;
+        text-align: center
+    }
+
+    .h_left {
+
+        position: revert;
+        width: 100%
+    }
+
+    .h_right {
+
+        font-size: 4rem;
+
+        position: revert;
+        width: 100%
+    }
+
+    .insta {
+        height: 0;
+        padding-top: calc(93.5/402*100%);
+        position: relative
+    }
+
+    .insta > li:nth-child(1) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 0
+    }
+
+    .insta > li:nth-child(2),
+    .insta > li:nth-child(3) {
+        display: none
+    }
+
+    .S_beer > .inner > p {
+        width: 60%;
+        margin: 0 auto
+    }
+
+    .i_set > li {
+        width: 50%
+    }
+
+    .i_set > li:nth-child(3),
+    .i_set > li:nth-child(4) {
+        display: none
+    }
+
+    .find > .inner {
+        width: 98%
+    }
+
+    .find > .inner > .find_set {
+        width: 75%;
+        margin: 1.2% 0
+    }
+
+    .find > .inner > .find_set > div:nth-child(1) {
+        width: 78%;
+        margin-top: 0.5%
+    }
+
+
+
+    .find > .inner > .find_set > .search {
+        width: 16%;
+        padding: 0.6% 0
+    }
+
+    .find > .inner > div:first-child {
+        width: 20%;
+        font-size: 1.8rem
+    }
+
+    .f_top > ul {
+        width: 100%
+    }
+
+    .f_top > ul > li {
+        width: 20%;
+        padding: 1.2%;
+        text-align: center
+    }
+
+    f_bottom {
+        width: 98%
+    }
+
+    .f_logo {
+        width: 25%
+    }
+
+    .f_logo img {
+        width: 100%
+    }
+
+    .f_bottom > div:last-child {
+        float: right
+    }
+
+    .f_bottom > div:last-child > ul {
+        float: none;
+        padding: 0
+    }
+
+    .f_bottom > div:last-child > p {
+        padding-top: 2%
+    }
+
+    .f_bottom:after {
+        display: block;
+        content: "";
+        clear: both
+    }
+}
+
+@media (max-width: 780px) {
+    .menu {
+        display: none
+    }
+
+    .login {
+        display: none
+    }
+
+    #header > div:nth-child(2) {
+        display: none
+    }
+
+    .bottom_header > .inner > ul > li a {
+        display: none
+    }
+
+    .logo {
+        width: 15%;
+        top: 5%
+    }
+
+    .best > .inner > p {
+        font-size: 1.2rem
+    }
+
+    h2 {
+        font-size: 4rem;
+        padding-bottom: 2%
+    }
+
+    .maintxt {
+        font-size: 1.2rem
+    }
+
+    .slick-dotted.slick-slider {
+        width: 80%
+    }
+
+    .i_set > li > p {
+        font-size: 1rem
+    }
+
+
+
+
+    .f_bottom > div:last-child > ul,
+    .f_top > ul > li {
+        font-size: .9rem
+    }
+
+
+    .f_bottom > div:last-child > p {
+        font-size: 1.2rem
+    }
+
+
+    .beach {
+        height: 0;
+        padding-top: calc(280/1920*100%);
+        width: 100%;
+        padding-bottom: calc(280/1920*100%)
+    }
+
+    .best > .inner > h2 > span:nth-child(2) {
+        top: 17%
+    }
+
+    .slick-initialized .slick-slide .h_slide {
+        width: 100%;
+        margin: 0 auto;
+        height: 73%
+    }
+
+    .slick-initialized .slick-slide .h_slide h2 {
+        font-size: 2.6rem;
+        padding-bottom: 10%;
+        margin: 0 5%
+    }
+
+    .slick-initialized .slick-slide .h_slide p {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 0 10%
+    }
+
+    .h_left img {
+        width: 100%
+    }
+
+    .h_right {
+        font-size: 2.6rem;
+        padding-top: 2%;
+        width: 100%
+    }
+
+
+
+
+
+
+}

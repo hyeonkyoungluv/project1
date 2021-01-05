@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            mobile_menu();
+        });
+
+        function mobile_menu() {
+            /* 변수 선언 */
+            var $menu = null;
+            var $left_gnb = null; // 영역 전체
+            var $depth1_wrap = null;
+            var $depth1 = null;
+            var $depth1_btn = null;
+
+            /* 시작 함수 */
+            function start() {
+                init();
+                init_event();
+            }
+            /* 변수 초기화 함수 */
+            function init() {
+                $menu = $('.m_menu');
+                $left_gnb = $('.left_gnbWrap'); // 영역 전체
+                $depth1_wrap = $('.left_gnb>li');
+                $depth1 = $depth1_wrap.children('ul');
+                $depth1_btn = $depth1_wrap.children('a');
+            }
+            /* 이벤트 함수 */
+            function init_event() {
+
+                /* 모바일 메뉴 버튼 클릭했을때 모바일 메뉴영역 나오게 하기 */
+                $menu.click(function(event) {
+                    event.preventDefault();
+                    $left_gnb.addClass('on');
+                });
+
+                /* x버튼 눌렀을때 모바일 메뉴 닫기 */
+                $('.close').click(function(event) {
+                    event.preventDefault();
+
+                    $left_gnb.removeClass('on');
+
+                    // x버튼 누르면 시간차 약간두고 소메뉴 닫히게 하기
+                    setTimeout(function() {
+                        $depth1_btn.removeClass('on');
+                        $depth1.slideUp();
+                    }, 300)
+                });
+
+                /* depth1의 각메뉴 클릭시 depth2 나오게 하기 */
+                $depth1_btn.click(function(event) {
+                    event.preventDefault();
+                    var $this = $(this);
+                    var $this_ul = $this.siblings('ul');
+
+                    var check = $this.hasClass('on');
+                    if (check) {
+                        $this.removeClass('on');
+                        $this_ul.stop(true, true).slideUp();
+                    } else {
+                        $depth1_btn.removeClass('on');
+                        $depth1.stop().slideUp();
+                        $this.addClass('on');
+                        $this_ul.stop(true, true).slideDown();
+                    }
+                });
+
+                /* 디바이스 크기 변경시 모바일 메뉴영역 숨기기 */
+                $(window).resize(function() {
+                    $left_gnb.removeClass('on');
+                });
+            }
+
+            start(); // 시작 호출
+        }
+    </script>
+
+
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script>
+        var j311 = jQuery.noConflict();
+    </script>
+    <script>
+        j311(function() {
+
+
+            var slide;
+
+            slide = setInterval(function() {
+                $('#slide .container> div:first-child').animate({
+                    'margin-left': '-1903px'
+                }, 600, function() {
+
+                    $('#slide .container').append($('#slide .container> div:first-child'));
+                    $('#slide .container> div:last-child').css({
+                        'margin-left': '0'
+                    });
+                });
+
+
+
+            }, 2500);
+
+        })
+    </script>
+
+    <script>
+        $(function() {
+            $('.modal').click(function() {
+                $('#pop_up').show();
+            });
+            $('#pop_up button').click(function() {
+                $('#pop_up').hide();
+            });
+
+            $('.modal_select a').each(function() {
+                $(this).click(function() {
+                    var a_href = $(this).attr('href');
+                    $('.pop').hide();
+                    $(a_href).show();
+
+                    $('.btn').click(function() {
+                        $(a_href).hide();
+
+                    });
+                });
+            });
+        });
+
+        function winOpen() {
+            window.open('contact.html', 'child', 'toolbar = no, location= no , status = no, menubar = no, resizable = no , scrollbars = no, width = 500, height = 300')
+        };
+    </script>
+</head>
+
+<body>
+
+
+
+    <div id="wrap">
+        <header id="header">
+
+
+
+            <div class="top_header">
+                <div class="inner">
+                    <div class="m_menu"><a href="#"><img src="img/ico_menu.png"></a></div>
+                    <nav class="left_gnbWrap">
+                        <a href="#" class="close">close</a>
+                        <ul class="left_gnb">
+                            <li>
+                                <a href="#">menu1</a>
+                                <ul>
+                                    <li><a href="#">sub1</a></li>
+                                    <li><a href="#">sub2</a></li>
+                                    <li><a href="#">sub3</a></li>
+                                    <li><a href="#">sub4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">menu2</a>
+                                <ul>
+                                    <li><a href="#">sub1</a></li>
+                                    <li><a href="#">sub2</a></li>
+                                    <li><a href="#">sub3</a></li>
+                                    <li><a href="#">sub4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">menu3</a>
+                                <ul>
+                                    <li><a href="#">sub1</a></li>
+                                    <li><a href="#">sub2</a></li>
+                                    <li><a href="#">sub3</a></li>
+                                    <li><a href="#">sub4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">menu4</a>
+                                <ul>
+                                    <li><a href="#">sub1</a></li>
+                                    <li><a href="#">sub2</a></li>
+                                    <li><a href="#">sub3</a></li>
+                                    <li><a href="#">sub4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="menu">
+                        <li><select>
+                                <option>CUSTOMER</option>
+                                <option>General</option>
+                                <option>VIP</option>
+                            </select>
+
+                        </li>
+                        <li>COMPANY</li>
+                        <li>SERVICE</li>
+                    </ul>
+                    <div><a href="#" class="modal">코나이벤트 자세히보기</a></div>
+                    <div id="pop_up">
+                        <div class="img">
+                            <img src="img/beerpopup.jpg">
+                            <div class="btn">
+                                <button>닫기</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="login">
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                        <li>회사소개</li>
+                        <li>ENGLISH</li>
+                    </ul>
+                </div>
+            </div>
+            <div></div>
+            <div class="bottom_header">
+                <div class="inner">
+                    <nav id="nav2" class="navi">
+                        <div class="inner">
+                            <ul class="depth1">
+                                <li><a href="#">BEST SELLER</a>
+
+                                    <ul class="submenu">
+                                        <li><a href="#">Awards</a></li>
+                                        <li><a href="#">Origin story</a></li>
+
+                                    </ul>
+
+                                </li>
+                                <li><a href="#">상품</a>
+                                    <ul class="submenu">
+                                       <li><a href="#">Our Beer</a></li>
+                                        <li><a href="#">Lager</a></li>
+                                        <li><a href="#">Ale</a></li>
+                                        <li><a href="#">IPA</a></li>
+                                        <li><a href="#">Stout</a></li>
+                                        <li><a href="#">Factory</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">이벤트/혜택</a>
+                                    <ul class="submenu">
+
+
+                                        <li><a href="sub.html">Halloween Ticket</a></li>
+                                        <li><a href="#">제휴 혜택</a></li>
+                                        <li><a href="#">진행중 이벤트</a></li>
+                                        <li><a href="#">이벤트 당첨자</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">고객지원</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Q&A</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="logo"><a href="index.html"><img src="img/LOGO.png"></a></div>
+                </div>
+            </div>
+
+        </header>
+        <article class="mainimg">
+
+            <div id="slide">
+                <div class="container">
+                    <div class="slide_photo1"></div>
+                    <div class="slide_photo2">
+                     </div>
+                    <div class="slide_photo3"></div>
+                </div>
+            </div>
+            <!--
+    <div class="flicker-example" data-block-text="false">
+
+        <ul>
+
+            <li>
+
+            </li>
+
+            <li>
+<video src="https://konabrewingco.com/uploads/docs/videos/kona-age-gate-desktop-1920x1080.mp4" controls loop muted autoplay>이 브라우저는 재생할 수 없습니다.</video>
+            </li>
+
+            <li>
+
+            </li>
+
+        </ul>
+
+    </div>
+-->
+        </article>
+
+        <main>
+            <section class="best">
+                <div class="inner">
+                    <h2><span></span><span>BEST</span><span></span></h2>
+                    <p class="maintxt">세계에서 가장 사랑받는 크래프트 비어 브랜드 코나는 하와이 정신을 여전히 지키고 있습니다.</p>
+
+
+
+
+                    <section class="regular slider">
+                        <div>
+                            <img src="img/layout_beer-Recovered_11.png" class="imgimg">
+                            <div class="h_slide">
+                                <h2>LONGBOARD ISLAND LAGER</h2>
+                                <p>Available year-round<br>Longboard Island Lager is a crisp, pale-gold lager made with choice malts and aromatic hops, brewed in a traditional lager style. It’s a smooth and easygoing beer that never goes out of style—ever.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_08.png" class="imgimg">
+                            <div class="h_slide">
+                                <h2>BIG WAVE GOLDEN ALE</h2>
+                                <p>Available year-round<br>Big Wave is a lighter-bodied golden ale with a tropical hop aroma and flavor—smooth, easy drinking, and refreshing. The use of caramel malt contributes to the golden hue of this beer, and our special blend of hops provides a bright, quenching finish that makes it a struggle to not grab another one.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_05.png" class="imgimg">
+                            <div class="h_slide">
+                                <h2>FIRE ROCK PALE ALE</h2>
+                                <p>Available year-round<br>Fire Rock Pale Ale is a copper-colored ale made from roasted malts and a selection of premium hops. With a Hawaiian style all its own, Fire Rock is smooth, yet bold in both flavor and aroma.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_11.png" class="imgimg">
+                            <div class="h_slide">
+                                <h2>LONGBOARD ISLAND LAGER</h2>
+                                <p>Available year-round<br>Longboard Island Lager is a crisp, pale-gold lager made with choice malts and aromatic hops, brewed in a traditional lager style. It’s a smooth and easygoing beer that never goes out of style—ever.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_05.png" class="imgimg">
+                            <div class="h_slide">
+                                <h2>FIRE ROCK PALE ALE</h2>
+                                <p>Available year-round<br>Fire Rock Pale Ale is a copper-colored ale made from roasted malts and a selection of premium hops. With a Hawaiian style all its own, Fire Rock is smooth, yet bold in both flavor and aroma.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_08.png" class="imgimg">
+                            <div class="h_slide">
+                                <h2>BIG WAVE GOLDEN ALE</h2>
+                                <p>Available year-round<br>Big Wave is a lighter-bodied golden ale with a tropical hop aroma and flavor—smooth, easy drinking, and refreshing. The use of caramel malt contributes to the golden hue of this beer, and our special blend of hops provides a bright, quenching finish that makes it a struggle to not grab another one.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- back up
+                       <div class="beer_set">
+                        <div class="beerimg"><img src="img/layout_beer-Recovered_11.png">
+                        <div>
+                            <h2>LONGBOARD ISLAND LAGER</h2>
+                        <p>Available year-round<br>Longboard Island Lager is a crisp, pale-gold lager made with choice malts and aromatic hops, brewed in a traditional lager style. It’s a smooth and easygoing beer that never goes out of style—ever.</p>
+                        </div>
+                        </div>
+                        <div class="beerimg1"><img src="img/layout_beer-Recovered_08.png">
+                        <div>
+                            <h2>BIG WAVE GOLDEN ALE</h2>
+                        <p>Available year-round<br>Big Wave is a lighter-bodied golden ale with a tropical hop aroma and flavor—smooth, easy drinking, and refreshing. The use of caramel malt contributes to the golden hue of this beer, and our special blend of hops provides a bright, quenching finish that makes it a struggle to not grab another one.</p>
+                        </div>
+                        </div>
+                        <div class="beerimg2"><img src="img/layout_beer-Recovered_05.png">
+                        <div>
+                            <h2>FIRE ROCK PALE ALE</h2>
+                        <p>Available year-round<br>Fire Rock Pale Ale is a copper-colored ale made from roasted malts and a selection of premium hops. With a Hawaiian style all its own, Fire Rock is smooth, yet bold in both flavor and aroma.</p>
+                        </div></div>
+                    </div>
+                    -->
+                    <div class="delivery">
+                        <div class="d_left">
+                            <h4>TAKE OUT & DELIVERY ONLY.PROVISIONAL HOURS(DUE TO COVID)</h4>
+                            <p>MONDAY&TUESDAY: 3PM - 8PM<br>
+                                WEDNESDAY - SUNDAY: NOON - 8PM<br>
+                                KONA BREWING i n Hawaii Kai in OAHU is our second restaurant, right on the docks of Koko Marina.
+                            </p>
+                        </div>
+                        <div class="d_right"><img src="img/d_icon.png">
+                            <p class="c_txt">Click here!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="Halloween">
+                <div class="inner">
+                    <div class="h_left"><img src="img/beer_set.png"></div>
+                    <h3 class="h_right">KONA BEER<br>Halloween Edition</h3>
+
+                </div>
+            </section>
+            <section class="S_beer">
+                <div class="inner">
+                    <h2>BEST SIGNATURE BEER</h2>
+                    <p class="maintxt">하와이의 정신, 문화, 아름다움을 담은 크래프트 비어를 만들고자했고, 그들은 1994년, 꿈을 실현시켰습니다.</p>
+
+                    <section class="center slider2">
+                        <div>
+                            <img src="img/layout_beer-Recovered_23.png" class="in_img">
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_26.png" class="in_img">
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_28.png" class="in_img">
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_26.png" class="in_img">
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_23.png" class="in_img">
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_28.png" class="in_img">
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_23.png" class="in_img">
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_26.png" class="in_img">
+                        </div>
+                        <div>
+                            <img src="img/layout_beer-Recovered_28.png" class="in_img">
+                        </div>
+                    </section>
+
+                    <!--backup start
+                    <ul class="insta">
+                        <li><img src="img/layout_beer-Recovered_26.png"></li>
+                        <li><img src="img/layout_beer-Recovered_28.png"></li>
+                        <li><img src="img/layout_beer-Recovered_23.png"></li>
+                    </ul>
+                    -->
+                </div>
+            </section>
+            <section class="enjoy">
+                <div class="inner">
+                    <h2>Enjoying Home Kona</h2>
+                    <p class="maintxt">사회적 거리두기 시대에 코나와 함께 home맥 즐기기!</p>
+                    <ul class="i_set">
+                        <li>
+                            <i><img src="img/layout_beer-Recovered_34.png"></i>
+                            <p>맥주</p>
+                        </li>
+                        <li>
+                            <i><img src="img/layout_beer-Recovered_37.png"></i>
+                            <p>피자</p>
+                        </li>
+                        <li>
+                            <i><img src="img/layout_beer-Recovered_43.png"></i>
+                            <p>음악</p>
+                        </li>
+                        <li>
+                            <i><img src="img/layout_beer-Recovered_40.png"></i>
+                            <p>넷플릭스</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="beach"></div>
+            </section>
+            <section class="find">
+                <div class="inner">
+                    <div>Find a Kona</div>
+                    <div class="find_set">
+                        <div></div>
+                        <div class="search"><i><img src="img/search.png"></i></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="inner">
+                <div class="f_top">
+                    <ul>
+                        <li>Contact us</li>
+                        <li>Accessibility</li>
+                        <li>Privacy Policy</li>
+                        <li>Careers</li>
+                        <li>Service</li>
+                        <li>About Kona</li>
+                        <li>Community</li>
+                        <li>Map</li>
+                    </ul>
+                </div>
+                <div class="f_bottom">
+                    <div class="f_logo"><img src="img/f_logo.png"></div>
+                    <div>
+                        <ul>
+                            <li>address 74-5612 Pawai PI,Kailua-Kona, HI 96740, US</li>
+                            <li>Beer made with passion, quality, and a whole lot of Hawaii.</li>
+                            <li>it’s Liquid Aloha from Kona Brewing Co.</li>
+                            <li>Copyright2020ⓒ Kona Brewing Co.</li>
+                        </ul>
+                        <p>Contact number +1 808-334-2739</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script>
+        var j220 = jQuery.noConflict();
+    </script>
+
+    <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        j220(document).on('ready', function() {
+
+
+            j220(".regular").slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                responsive: [ // 반응형 웹 구현 옵션
+                    {
+                        breakpoint: 1279, //화면 사이즈 960px
+                        settings: {
+                            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 680, //화면 사이즈 768px
+                        settings: {
+                            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            j220(".center").slick({
+                dots: true,
+                infinite: true,
+                centerMode: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                responsive: [ // 반응형 웹 구현 옵션
+                    {
+                        breakpoint: 1279, //화면 사이즈 960px
+                        settings: {
+                            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 680, //화면 사이즈 768px
+                        settings: {
+                            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+
+            });
+        });
+    </script>
+</body></html>
