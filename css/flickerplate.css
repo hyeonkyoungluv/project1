@@ -24,18 +24,20 @@
     display: table
 }
 
-  
-.flickerplate ul.flicks > li:nth-child(1){background-image: url(../img/layout_beer-Recovered_02.jpg);background-size: cover}
+.flickerplate ul.flicks > li:nth-child(1) {
+    background-image: url(../img/1.jpg);
+    background-size: cover
+}
 
+.flickerplate ul.flicks > li:nth-child(2) {
+    background-image: url(../img/2.jpg);
+    background-size: cover
+}
 
-.flickerplate ul.flicks > li:nth-child(2){background-image: url(../img/2.jpg);background-size: cover}
-
-
-.flickerplate ul.flicks > li:nth-child(3){background-image: url(../img/3.jpg);background-size: cover}
-
-
-
-
+.flickerplate ul.flicks > li:nth-child(3) {
+    background-image: url(../img/3.jpg);
+    background-size: cover
+}
 
 
 
@@ -44,16 +46,18 @@
 
 .flickerplate ul.flicks > li .flick-inner {
     height: 100%;
-    padding: 10px;
+    
     color: #fff;
     display: table-cell;
     vertical-align: middle
 }
 
 .flickerplate ul.flicks > li .flick-inner .flick-content {
-    max-width: 68.75em;
+    
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .flickerplate ul.flicks > li .flick-title {
@@ -144,7 +148,7 @@
 
 .flickerplate .dot-navigation {
     position: absolute;
-    bottom: 15px;
+    bottom: -450px;
     width: 100%;
     text-align: center;
     z-index: 100
@@ -279,20 +283,26 @@
     position: auto
 }
 
+@media (max-width:1279px) {
+    .flickerplate {
+        padding-top: calc(1028/750*100%)
+    }
+
+    .flickerplate ul.flicks > li:nth-child(1) {
+        background-image: url(../img/1_m.jpg);
+        background-size: cover
+    }
+
+    .flickerplate ul.flicks > li:nth-child(2) {
+        background-image: url(../img/m_m.jpg);
+        background-size: cover
+    }
+
+    .flickerplate ul.flicks > li:nth-child(3) {
+        background-image: url(../img/3_m.jpg);
+        background-size: cover
+    }
 
 
-@media(max-width:1200px){
 
-    .flickerplate ul.flicks > li:nth-child(1){background-image: url(../img/m_main.jpg);background-size: cover}
-
-
-.flickerplate ul.flicks > li:nth-child(2){background-image: url(../img/2_m.jpg);background-size: cover}
-
-
-.flickerplate ul.flicks > li:nth-child(3){background-image: url(../img/3_m.jpg);background-size: cover}
-
-  
-
-
-    
 }

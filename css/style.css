@@ -28,8 +28,6 @@ ul {
 
 video {
     width: 100%;
-    position: absolute;
-    top: -20%
 }
 
 /*header*/
@@ -297,7 +295,7 @@ a.close {
     width: 104px;
     height: 82px;
     position: absolute;
-    top: 50px;
+    top: 48px;
     left: 15%;
     right: 15%;
     margin: 0 auto
@@ -385,7 +383,7 @@ button {
     left: 0;
     right: 0;
     margin: 0 auto;
-
+overflow: hidden;
     position: relative;
 }
 
@@ -410,19 +408,10 @@ button {
     width: 100%;
 }
 
-#slide .slide_photo1 {
-    background-image: url(../img/layout_beer-Recovered_02.jpg);
-    background-size: 100%;
 
-}
 
-#slide .slide_photo2 {}
 
-#slide .slide_photo3 {
-    background-image: url(../img/main1.jpg);
-    background-size: 100%;
 
-}
 
 
 .flickerplate {
@@ -442,29 +431,14 @@ button {
     list-style: none
 }
 
-.flickerplate ul.flicks > li {
-    float: left;
-    width: 1%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    display: table
-}
-
 
 .flickerplate ul.flicks > li:nth-child(1) {
-    background-image: url(../img/layout_beer-Recovered_02.jpg);
+    background-image: url(../img/1.jpg);
     background-size: cover
 }
 
 
-.flickerplate ul.flicks > li:nth-child(2) {}
 
-
-.flickerplate ul.flicks > li:nth-child(3) {
-    background-image: url(../img/main1.jpg);
-    background-size: cover
-}
 
 
 
@@ -477,14 +451,14 @@ button {
 
 .flickerplate ul.flicks > li .flick-inner {
     height: 100%;
-    padding: 10px;
+   
     color: #fff;
     display: table-cell;
     vertical-align: middle
 }
 
 .flickerplate ul.flicks > li .flick-inner .flick-content {
-    max-width: 68.75em;
+    
     margin-left: auto;
     margin-right: auto
 }
@@ -495,11 +469,7 @@ button {
     padding-top: calc(640/1920*100%);
 }
 
-video {
-    width: 100%;
-    position: absolute;
-    top: -20%
-}
+
 
 .flickerplate ul.flicks > li .flick-title {
     padding: 0px 0px;
@@ -1082,12 +1052,10 @@ h2 {
 
 .find > .inner {
     height: 78px;
-    width: 1280px
+    width: 1280px;position: relative
 }
 
-.find > .inner > div {
-    float: left
-}
+
 
 .find > .inner:after {
     display: block;
@@ -1095,28 +1063,24 @@ h2 {
     clear: both
 }
 
-.find_set {
-    margin: 15px 45px
-}
+
 
 .find > .inner > .find_set > div:nth-child(1) {
     width: 993px;
     height: 52px;
     background-color: #bfdfea;
     border-radius: 40px;
-    float: left
+   position: absolute;left: 11%;top: 17%
 }
 
-.find > .inner > .find_set > .search {
-    float: right;
-}
-
-
+.find > .inner > .find_set> .search {position: absolute;
+    right: 5%;
+    top: 22%;}
 
 .find > .inner > div:first-child {
     font-size: 2.4rem;
     line-height: 78px;
-    font-family: "Sriracha"
+    font-family: "Sriracha";position: absolute
 }
 
 
@@ -1133,9 +1097,9 @@ h2 {
     width: 10.75%;
     padding-right: 2%
 }
-
-.f_top > ul {
-    color: #85b6cc;
+.f_top > ul a{text-decoration: none;color: #85b6cc}
+.f_top > ul  {
+    
     font-size: 1.7rem;
     width: 90%;
     padding: 30px 0
@@ -1711,7 +1675,7 @@ dd{
     }
 
     .find > .inner {
-        width: 98%
+        width: 98%;
     }
 
     .find > .inner > .find_set {
@@ -1726,16 +1690,13 @@ dd{
 
 
 
-    .find > .inner > .find_set > .search {
-        width: 16%;
-        padding: 0.6% 0
-    }
-
-    .find > .inner > div:first-child {
-        width: 20%;
-        font-size: 1.8rem
-    }
-
+   
+ 
+    .find > .inner > div:last-child{left: 20%}
+    
+    
+    
+    
     .f_top > ul {
         width: 100%
     }

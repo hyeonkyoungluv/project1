@@ -7,15 +7,34 @@
     <title>Document</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-
+<!--모바일메뉴js-->
 
 
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 
+<!-- Layer popup start -->
+    <script language="JavaScript">
+<!--
+function setCookie( name, value, expiredays ) {
+    var todayDate = new Date();
+        todayDate.setDate( todayDate.getDate() + expiredays );
+        document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    }
 
+function closeWin() {
+    if ( document.notice_form.chkbox.checked ){
+        setCookie( "maindiv", "done" , 1 );
+    }
+    document.all['divpop'].style.visibility = "hidden";
+}
+//--> 
+</script>
+<!-- Layer popup end -->
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
     <script>
         $(document).ready(function() {
             mobile_menu();
@@ -148,6 +167,19 @@
             window.open('contact.html', 'child', 'toolbar = no, location= no , status = no, menubar = no, resizable = no , scrollbars = no, width = 500, height = 300')
         };
     </script>
+    
+    <script src="js/min/jquery-v1.10.2.min.js" type="text/javascript"></script>
+    
+   	<link href="css/flickerplate.css"  type="text/css" rel="stylesheet">
+   
+    <script src="js/min/flickerplate.min.js" type="text/javascript"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		$('.flicker-example').flicker();
+	});
+	</script>
 </head>
 
 <body>
@@ -214,6 +246,48 @@
                         <li>COMPANY</li>
                         <li>SERVICE</li>
                     </ul>
+<!--                    팝업 생성-->
+                  <!-- POPUP start -->
+<div id="divpop" style="position:absolute;left:60px;top:150px;z-index:200;visibility:hidden;">
+ <table width=350px height=385px cellpadding=0 cellspacing=0>
+<tr>
+    <td style="border:0px #848484 solid" height=385px align=center bgcolor=white> 
+     <img src="img/beerpopup_350.jpg">
+    </td>
+</tr>
+    
+<tr>
+    <td height=10 bgcolor="#848484">
+    </td>
+</tr>
+   
+<tr>
+        <form name="notice_form">
+    <td height=25 align=right bgcolor="#848484" valign=middle>
+        <input type="checkbox" name="chkbox" value="checkbox"> <font color=#eeeeee>오늘 하루 이 창을 열지 않음 </font>
+        <a href="javascript:closeWin();"> <font color=#eeeeee> <B>[닫기]</B> </font></a>
+    </td> 
+       </form>
+</tr>
+</table>
+</div> 
+
+<script language="Javascript">
+cookiedata = document.cookie;   
+if ( cookiedata.indexOf("maindiv=done") < 0 ){     
+    document.all['divpop'].style.visibility = "visible";
+    }
+    else {
+        document.all['divpop'].style.visibility = "hidden";
+}
+</script>
+<!-- POPUP end -->
+
+                  
+                   
+                   
+                    
+<!--
                     <div><a href="#" class="modal">코나이벤트 자세히보기</a></div>
                     <div id="pop_up">
                         <div class="img">
@@ -224,6 +298,7 @@
                         </div>
 
                     </div>
+-->
                     <ul class="login">
                         <li>로그인</li>
                         <li>회원가입</li>
@@ -284,35 +359,30 @@
         </header>
         <article class="mainimg">
 
-            <div id="slide">
-                <div class="container">
-                    <div class="slide_photo1"></div>
-                    <div class="slide_photo2">
-                     </div>
-                    <div class="slide_photo3"></div>
-                </div>
-            </div>
-            <!--
-    <div class="flicker-example" data-block-text="false">
-
-        <ul>
-
-            <li>
-
-            </li>
-
-            <li>
-<video src="https://konabrewingco.com/uploads/docs/videos/kona-age-gate-desktop-1920x1080.mp4" controls loop muted autoplay>이 브라우저는 재생할 수 없습니다.</video>
-            </li>
-
-            <li>
-
-            </li>
-
-        </ul>
-
-    </div>
--->
+          <!--Basic example-->
+	<div class="flicker-example main-v" data-block-text="false">
+		
+		<ul>
+			
+			<li>
+				<video src="https://konabrewingco.com/uploads/docs/videos/kona-age-gate-desktop-1920x1080.mp4" controls loop muted autoplay>이 브라우저는 재생할 수 없습니다.</video>
+			</li>
+			
+			<li>
+				
+			</li>
+			
+			<li>
+				
+			</li>
+			
+		</ul>
+		
+	</div>
+	
+           
+            
+       
         </article>
 
         <main>
@@ -370,27 +440,7 @@
                     </section>
 
 
-                    <!-- back up
-                       <div class="beer_set">
-                        <div class="beerimg"><img src="img/layout_beer-Recovered_11.png">
-                        <div>
-                            <h2>LONGBOARD ISLAND LAGER</h2>
-                        <p>Available year-round<br>Longboard Island Lager is a crisp, pale-gold lager made with choice malts and aromatic hops, brewed in a traditional lager style. It’s a smooth and easygoing beer that never goes out of style—ever.</p>
-                        </div>
-                        </div>
-                        <div class="beerimg1"><img src="img/layout_beer-Recovered_08.png">
-                        <div>
-                            <h2>BIG WAVE GOLDEN ALE</h2>
-                        <p>Available year-round<br>Big Wave is a lighter-bodied golden ale with a tropical hop aroma and flavor—smooth, easy drinking, and refreshing. The use of caramel malt contributes to the golden hue of this beer, and our special blend of hops provides a bright, quenching finish that makes it a struggle to not grab another one.</p>
-                        </div>
-                        </div>
-                        <div class="beerimg2"><img src="img/layout_beer-Recovered_05.png">
-                        <div>
-                            <h2>FIRE ROCK PALE ALE</h2>
-                        <p>Available year-round<br>Fire Rock Pale Ale is a copper-colored ale made from roasted malts and a selection of premium hops. With a Hawaiian style all its own, Fire Rock is smooth, yet bold in both flavor and aroma.</p>
-                        </div></div>
-                    </div>
-                    -->
+                    
                     <div class="delivery">
                         <div class="d_left">
                             <h4>TAKE OUT & DELIVERY ONLY.PROVISIONAL HOURS(DUE TO COVID)</h4>
@@ -486,7 +536,7 @@
                     <div>Find a Kona</div>
                     <div class="find_set">
                         <div></div>
-                        <div class="search"><i><img src="img/search.png"></i></div>
+                        <div class="search"><i><img src="img/search.png" ></i></div>
                     </div>
                 </div>
             </section>
@@ -495,14 +545,14 @@
             <div class="inner">
                 <div class="f_top">
                     <ul>
-                        <li>Contact us</li>
-                        <li>Accessibility</li>
-                        <li>Privacy Policy</li>
-                        <li>Careers</li>
-                        <li>Service</li>
-                        <li>About Kona</li>
-                        <li>Community</li>
-                        <li>Map</li>
+                        <li><a target="_blank" href="https://www.konabrewinghawaii.com/contact-us">Contact us</a></li>
+                        <li><a target="_blank" href="https://www.konabrewinghawaii.com/privacy-policy">Accessibility</a></li>
+                        <li><a target="_blank" href="https://www.konabrewinghawaii.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a target="_blank" href="https://www.konabrewinghawaii.com/privacy-policy">Careers</a></li>
+                        <li><a target="_blank" href="https://www.konabrewinghawaii.com/privacy-policy">Service</a></li>
+                        <li><a target="_blank" href="https://www.konabrewinghawaii.com/contact-us">About Kona</a></li>
+                        <li><a target="_blank" href="https://www.konabrewinghawaii.com/contact-us">Community</a></li>
+                        <li><a target="_blank" href="https://konabrewingco.com/find-a-kona">Map</a></li>
                     </ul>
                 </div>
                 <div class="f_bottom">

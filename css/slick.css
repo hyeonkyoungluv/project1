@@ -27,7 +27,7 @@
         }
 
         .slick-active {
-            opacity: .5;
+            opacity: 1;
         }
 
         .slick-current {
@@ -95,7 +95,11 @@ width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
+.main-v .slick-track{width: auto !important}
+
+
 .slick-track:before,
 .slick-track:after
 {
