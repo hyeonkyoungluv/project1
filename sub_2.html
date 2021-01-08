@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Awards</title>
 <!--    폰트적용-->
     <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
     
@@ -44,13 +44,14 @@ function closeWin() {
 
    <!--아코디언js-->
    <script>$(document).ready(function() {
-  jQuery(".content").hide();
+  jQuery(".content").hide()
 //content 클래스를 가진 div를 표시/숨김(토글)
   $(".heading").click(function()
   {
     $(".content").not($(this).next(".content").slideToggle(500)).slideUp();
-  });
+  }); $(".heading").eq(0).trigger("click");
 });</script>
+    
    <!--아코디언js.end-->
    
     <script>
@@ -366,7 +367,7 @@ if ( cookiedata.indexOf("maindiv=done") < 0 ){
                 
                 <div class="layer1">
 <p class="heading">Origin story </p>
-<div class="content"><span class="niccone">Catch a wave</span>
+<div class="content opencontent1"><span class="niccone">Catch a wave</span>
                         The waves in Hawaii are legendary. In the winter months, the island’s north and west coasts see big waves that often climb to 40 feet, with huge curls of white water breaking off shore. This is just one reason why surfers, body boarders, paddlers, and those of us just willing to watch from the beach make this pilgrimage.</div>
 <p class="heading">Brewers notes</p>
 <div class="content">BITTERNESS

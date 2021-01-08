@@ -235,7 +235,7 @@ a.close {
 
 #nav2 .depth1 ul {
     border-right: 1px solid #ccc;
-    height: 200px;
+    height: 260px;
     opacity: 0;
     transition: opacity 1s;
     padding: 0 10px;
@@ -1370,6 +1370,8 @@ h2 {
             position: relative;
             background-color: #c30;
         }
+
+
 
         .content {
             padding: 5px 10px;
