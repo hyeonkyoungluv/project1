@@ -107,9 +107,9 @@ a.close {
     position: absolute;
     right: 0;
     top: 0;
-    color: #000;
+    color: #fff;
     line-height: 50px;
-    text-align: center;
+    text-align: center;text-decoration: none;font-size: small
 }
 
 .left_gnbWrap {
@@ -121,7 +121,7 @@ a.close {
     background-color: #5bb6d0;
     padding-top: 50px;
     z-index: 999;
-    transition: all 0.3s;
+    transition: all 0.3s
 }
 
 .left_gnbWrap.on {
@@ -140,11 +140,11 @@ a.close {
     width: 100%;
     height: 50px;
     background-color: #addae7;
-    color: black;
+    color: #fff;text-decoration: none;font-size: small;
 }
 
 .left_gnb > li > a.on {
-    background-color: #f2ce5a;
+    background-color: #f2ce5a;color: #fff;text-decoration: none;font-size: small
 }
 
 .left_gnb > li > ul {
@@ -158,7 +158,7 @@ a.close {
     width: 100%;
     height: 50px;
     background-color: #f3e5b8;
-    color: black;
+    color: #fff;text-decoration: none;font-size: small
 }
 
 
@@ -326,66 +326,7 @@ a.close {
 }
 
 
-/*popup*/
-#pop_up {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 99;
-    display: none;
-}
 
-/*뒷 배경*/
-#pop_up .img {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    text-align: center;
-}
-
-#pop_up .img img {
-    display: block;
-    padding: 20px;
-}
-
-button {
-    cursor: pointer;
-}
-
-#pop_up .btn {
-    margin: 20px 0;
-    text-align: center;
-}
-
-#pop_up .btn button {
-    padding: 6px 12px;
-    border: none;
-    border-radius: 6px;
-    background: #009688;
-    color: white;
-}
-
-.modal {
-    display: block;
-    padding: 12px 0 0 23%;
-        text-decoration: none;
-    color: brown;font-size: 1.2rem
-}
-
-.mainimg {
-    width: 100%;
-    height: 640px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-overflow: hidden;
-    position: relative;
-}
 
 /*main*/
 #slide .container {
@@ -1286,6 +1227,7 @@ h2 {
     color: #343535;
     padding: 1.5% 0
 }
+.s_title>h4{font-size: 1.8rem}
 
 .box1 > .inner > ul:first-child > li:nth-child(1) {
     float: left
@@ -1321,10 +1263,12 @@ h2 {
 
 .box1 > .inner > ul:nth-child(3) > li {
     float: left;
-    width: 30%;
+    width: 40%;
     padding: 1.2% 0;
-    text-align: center
+    font-size: 1.7rem
 }
+.box1 > .inner > ul:nth-child(3) > li:nth-child(2){width: 34%;font-size: 1.5rem}
+.box1 > .inner > ul:nth-child(3) > li:last-child{width: auto;font-size: 1.5rem}
 
 .box1 > .inner > ul:nth-child(3) > li:first-child {
     text-align: left
@@ -1346,13 +1290,13 @@ h2 {
 }
 
 .price > li > dl > dd:nth-child(1) {
-    font-size: 1.3rem;
+    font-size: 1.8rem;color: red;
     text-decoration-line: line-through
 }
 
 .price > li:first-child {
     text-align: left;
-    font-size: 1.5rem
+    font-size: 1.7rem
 }
 
 .price:after {
@@ -1386,15 +1330,17 @@ h2 {
     width: 280px;
     height: 84px;
     text-align: center;
-    color: #fff;
-    font-size: 2.4rem;
+    
     line-height: 84px;
     margin: 1.8% auto;
 }
+.reserve>a{text-decoration: none;color: #fff;
+    font-size: 2.4rem; }
 
 .s_con > div > p {
     width: 70%;
-    margin: 4.5% auto
+    margin: 3.5% auto
+        ;font-size: 1.44rem
 }
 
 .sub_contents > p {
@@ -1402,14 +1348,41 @@ h2 {
     padding: 1.5% 0
 }
 
+/*sub2_아코디언*/
+ .layer1 {
+            margin: 0;
+            padding: 0;
+            width: 500px;
+        }
 
+        .heading {
+            margin: 1px;
+            color: #fff;
+            padding: 3px 10px;
+            cursor: pointer;
+            position: relative;
+            background-color: #c30;
+        }
+
+        .content {
+            padding: 5px 10px;
+            background-color: #fafafa;
+        }
+
+        p {
+            padding: 5px 0;
+        }
 
 /*sub2*/
 
+/*글씨체-->*/
+.niccone{font-family: 'Niconne', cursive;font-size: 2.4rem;font-weight: 400}
+.widelyable{font-family: 'Niconne', cursive;font-size: 2.4rem;padding-top: 25px}
+/*글씨체-end->*/
 
-#sub_2{background-image: url(../img/sub2_bg.jpg);background-size: cover;width: 100%;height: 1800px}
+#sub_2{background-image: url(../img/sub2_bg.jpg);background-size: cover;width: 100%;height: auto}
 
-
+.sub_scribe{width: 40%;font-size: 1.5rem;text-align: center;margin: 1% auto}
 
 .ourbeer{width: 200px;height: 50px;text-align: center;margin: 0 auto;padding-top: 8%}
 .ourbeer>img{width: 100%}
@@ -1424,6 +1397,9 @@ h2 {
 
 #sub_2 .inner:after{display: block;content: "";clear: both}
 
+.sub2_container{padding-bottom: 6%}
+
+.sub_beer_txt{width: 60%;font-size: 1.4rem;padding-top: 15px;padding-bottom: 20px}
 /*아코디언*/
 
 
@@ -1440,7 +1416,7 @@ dt{
 	margin:0 0 2px;
 }
 dd{
-	font-size:14px;
+	font-size:5.2rem;
 	color:#4d4d4d;
 	background:#fff;
 	padding:10px 20px;
