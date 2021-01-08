@@ -283,7 +283,13 @@
     position: auto
 }
 
+.p_video{display: block}
+.m_video{display: none}
+
 @media (max-width:1279px) {
+    
+        .p_video{display: none}
+.m_video{display: block}
     .flickerplate {
         padding-top: calc(1028/750*100%)
     }
