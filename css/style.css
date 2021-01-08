@@ -1411,6 +1411,7 @@ h2 {
 .beer_detail{float: right;width: 65%}
 
 .beer_title{padding-top: 8%}
+.beer_title>img{width: 60%}
 
 #sub_2 .inner:after{display: block;content: "";clear: both}
 
