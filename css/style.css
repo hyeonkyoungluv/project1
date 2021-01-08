@@ -1373,10 +1373,10 @@ h2 {
         .heading {
             margin: 1px;
             color: #fff;
-            padding: 3px 10px;
+            padding: 1.5% 10px;
             cursor: pointer;
             position: relative;
-            background-color: #c30;
+            background-color: #c30;font-size: 1.3rem
         }
 
 
@@ -1389,6 +1389,9 @@ h2 {
         p {
             padding: 5px 0;
         }
+.bitterness{float: left;width: 48.5%;line-height: 150%}
+.foodpairings{float: right;width: 48.5%;line-height: 150%}
+.content:after{display: block;content: "";clear: both}
 
 /*sub2*/
 
@@ -1411,7 +1414,7 @@ h2 {
 .beer_detail{float: right;width: 65%}
 
 .beer_title{padding-top: 8%}
-.beer_title>img{width: 60%}
+.beer_title>img{max-width: 40%}
 
 #sub_2 .inner:after{display: block;content: "";clear: both}
 
