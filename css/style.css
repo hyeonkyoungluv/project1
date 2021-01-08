@@ -1220,7 +1220,15 @@ h2 {
 
 
 
-/*sub*/
+/*sub1*/
+
+
+.inner.sub_inner{width: 80%!important}
+
+
+
+
+
 .sub_main {
     background-image: url(../img/sub_main.jpg);
     width: 100%;
